@@ -6,11 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script defer type="text/javascript" src="index.js"></script>
         <title>Cocktail Overflow</title>
     </head>
     <body>
-        <h1 id="main-heading">Cocktail Overflow</h1>
+        <h1 id="main-heading">
+            <p>Cocktail Overflow</p>
+        </h1>
         <section id="alcohol-menu">
         <ul id="alcohol">
             <!--Put liquers here from server with name identification-->
@@ -26,11 +27,14 @@
                 <li>Cocktails go here</li>
             </ul>
         </section>
+        <div id="center-grid">
         <section id="cocktail-details">
             <!--Put cocktails details here, name and thumbnail etc-->
             <!--Be mainly the image-->
-            <img src="" alt="cocktail name here"/>
             Cocktail image and name here
+            <br>
+            <img src="" alt="cocktail name here"/>
+            
         </section>
         <section id="cocktail-recipe">
             <!--Put cocktails recipe here-->
@@ -38,17 +42,22 @@
             <h2>Recipe</h2>
             Put recipe here
             <!--Put cocktails rating and comment form here-->
+            <br>
             <label for="rating-comment">Tried the recipe?</label>
             <h2>Feedback</h2>
             <form id="rating-comment">
                 Put a form here for the rating and comment
+                <br>
                 <label for="rating-given">Give a rating:</label>
                 <input type="text" id="rating-given">
+                <br>
                 <label for="comment-given">Leave a comment:</label>
                 <input type="text" id="comment-given">
+                <br>
                 <input type="submit" id="submit-form">
             </form>
         </section>
+        </div>
         <section id="cocktail-ingredients">
             <h2>Ingredients</h2>
             Style this divided from the rest of the section
@@ -68,8 +77,9 @@
             <p id="rating">Put rating here</p>
             <p id="comment">Put comment here</p>
         </section>
+        <script defer type="text/javascript" src="index.js"></script>
     </body>
     <footer id="footer">
-        Let's see what we can put here in the footer
+        <p>© 2022 Michelle Mounde</p>
     </footer>
 </html>
