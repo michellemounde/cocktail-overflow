@@ -15,9 +15,42 @@ const glass = "g="
 
 document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11007")
+    getAlcohol("Vodka")
+    getAlcohol("Whiskey")
+    
+    
 
 })
 
+// Get and load alcohol to pick from
+
+function getAlcohol(liquor) {
+    fetch(`${BASE_URL}/${filter}${ingredient}${liquor}`)
+    .then(resp => resp.json())
+    .then(data => {
+        const alcohol = data.drinks
+        console.log(alcohol)
+        loadAlcohol(liquor)
+    })
+    .catch(err => {throw err})
+}
+
+function loadAlcohol(name) {
+    const liquor = document.createElement("li")
+    const alcoholMenu = document.querySelector("#alcohol")
+
+    liquor.id = name
+    liquor.className = "alcohol-item"
+    liquor.textContent = name
+
+    alcoholMenu.append(liquor)
+
+}
+
+// Get and load cocktails based on alcohol
+
+
+// Get and load cocktail details to page on click
 function getCocktail(id) {
     fetch(`${BASE_URL}/${lookup}${ingredient}${id}`)
     .then(resp => resp.json())
