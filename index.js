@@ -30,11 +30,10 @@ function getCocktail(id) {
 }
 
 function loadCocktail(cocktail) {
-    const body = document.querySelector("body")
-    const cocktailDetails = document.createElement("div")
+    const details = document.querySelector("#cocktail-details")
+    const img = details.querySelector("img")
+    img.src = `${cocktail.strDrinkThumb}/preview`
+    img.alt = cocktail.strDrink
 
-    cocktailDetails.id = "cocktail-details"
-    cocktailDetails.textContent = cocktail.strDrink
 
-    body.append(cocktailDetails)
 }

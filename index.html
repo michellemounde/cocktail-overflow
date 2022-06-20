@@ -5,36 +5,71 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script defer type="text/javascript" src="index.js"></script>
         <title>Cocktail Overflow</title>
     </head>
     <body>
-        <h1>Cocktail Overflow</h1>
-        <div id="alcohol-menu">
+        <h1 id="main-heading">Cocktail Overflow</h1>
+        <section id="alcohol-menu">
         <ul id="alcohol">
             <!--Put liquers here from server with name identification-->
             <!--Be a side scrollable list through CSS-->
+            <li>Alcohol types go here</li>
         </ul>
-        </div>
-        <div id="cocktail-menu">
+        </section>
+        <section id="cocktail-menu">
             <!--Put cocktails based on alcohol here with name identification-->
             <!--Be an unordered list-->
-        </div>
-        <div id="cocktail-details">
+            <h2>Cocktails</h2>
+            <ul id="cocktails">
+                <li>Cocktails go here</li>
+            </ul>
+        </section>
+        <section id="cocktail-details">
             <!--Put cocktails details here, name and thumbnail etc-->
             <!--Be mainly the image-->
-        </div>
-        <div id="cocktail-recipe">
+            <img src="" alt="cocktail name here"/>
+            Cocktail image and name here
+        </section>
+        <section id="cocktail-recipe">
             <!--Put cocktails recipe here-->
             <!--Be a paragraph-->
-
-            <!--Put cocktails like,rating and comment form here-->
-        </div>
-        <div id="cocktail-ingredients">
+            <h2>Recipe</h2>
+            Put recipe here
+            <!--Put cocktails rating and comment form here-->
+            <label for="rating-comment">Tried the recipe?</label>
+            <h2>Feedback</h2>
+            <form id="rating-comment">
+                Put a form here for the rating and comment
+                <label for="rating-given">Give a rating:</label>
+                <input type="text" id="rating-given">
+                <label for="comment-given">Leave a comment:</label>
+                <input type="text" id="comment-given">
+                <input type="submit" id="submit-form">
+            </form>
+        </section>
+        <section id="cocktail-ingredients">
+            <h2>Ingredients</h2>
+            Style this divided from the rest of the section
             <!--Put cocktails ingredients here-->
             <!--Be an ordered list-->
-            
-            <!--Put cocktails like,rating and comment input here-->
-        </div>
-        <script defer type="text/javascript" src="index.js"></script>
+            Style this as a list on right side of page
+            <ol id="ingredients">
+                <li>Put cocktails here</li>
+            </ol>
+            <!--Put cocktails like button here & rating and comment input here-->
+            <h2>Rating</h2>
+            <p id="like-button">
+                <button type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-heart-empty"></span> Like
+                </button>
+              </p>
+            <p id="rating">Put rating here</p>
+            <p id="comment">Put comment here</p>
+        </section>
     </body>
+    <footer id="footer">
+        Let's see what we can put here in the footer
+    </footer>
 </html>

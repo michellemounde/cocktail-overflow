@@ -1,0 +1,71 @@
+* {
+    background-color: #FAEBD7;
+    background-image: radial-gradient(#FFFAF0, #FAEBD7);
+}
+
+#main-heading {
+    
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+body {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:    minmax(50px, auto);
+    grid-template-columns: minmax(auto, 30%);
+
+}
+
+#alcohol-menu {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+#cocktail-menu {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+#cocktail-details {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+#cocktail-recipe {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+#cocktail-ingredients {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
+
+#footer {
+    color: rgb(9, 9, 43);
+    grid-row-start:    1;
+    grid-row-end:      1;
+    grid-column-start: 1;
+    grid-column-end:   3;
+}
