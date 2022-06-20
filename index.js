@@ -32,8 +32,10 @@ function getCocktail(id) {
 function loadCocktail(cocktail) {
     const details = document.querySelector("#cocktail-details")
     const img = details.querySelector("img")
+    const cocktailName = details.querySelector("#cocktail-name")
+
     img.src = `${cocktail.strDrinkThumb}/preview`
     img.alt = cocktail.strDrink
 
-
+    cocktailName.textContent = cocktail.strDrink
 }
