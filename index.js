@@ -1,18 +1,8 @@
 const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/"
-const search = "search.php?"
 const lookup = "lookup.php?"
-const random = "random.php?"
 const filter = "filter.php?"
-const list = "list.php?"
 const ingr = "i="
-const name = "s="
-const firstLetter = "f="
-const ingrID = "iid="
-const alcoholPresence = "a="
-const category = "c="
-const glass = "g="
 
-//consider adding an event listener for search by enter
 document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11007")
     getCocktails()
@@ -40,15 +30,8 @@ function getCocktails() {
 
 function loadCocktails(cocktails) {
     const ol = document.querySelector("#cocktails")
-    if (ol.textContent === "") {
-        createCocktails(cocktails)
-    } else {
-        ol.textContent = ""
-        createCocktails(cocktails)
-    }
-}
+    ol.textContent = ""
 
-function createCocktails(cocktails) {
     cocktails.forEach(cocktail => {
         const li = document.createElement("li")
         const ol = document.querySelector("#cocktails")
@@ -69,30 +52,17 @@ function createCocktails(cocktails) {
 function searchIngredient() {
     const form = document.querySelector("#search-alcohol")
     const searchIngr = form.querySelector("#alcohol-search")
-    const btn = form.querySelector("button")
-
-    btn.addEventListener("click", (e) => {
-        fetch(`${BASE_URL}/${filter}${ingr}${e.target.parentNode.searchIngr.value}`)
+    
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        fetch(`${BASE_URL}/${filter}${ingr}${searchIngr.value}`)
         .then(resp => resp.json())
         .then(data => {
-            e.preventDefault()
-            console.log(e.target.parentNode.searchIngr.value)
             const cocktails = data.drinks
             loadCocktails(cocktails)
         })
         .catch(err => {throw err})
-    })
-
-    searchIngr.addEventListener("input", (e) => {
-        fetch(`${BASE_URL}/${filter}${ingr}${e.target.value}`)
-            .then(resp => resp.json())
-            .then(data => {
-                e.preventDefault()
-                console.log(e.target.value)
-                const cocktails = data.drinks
-                loadCocktails(cocktails)
-            })
-            .catch(err => {throw err})
+        e.target.reset()
     })
 }
 
@@ -124,12 +94,38 @@ function loadCocktail(cocktail) {
     glass.textContent = cocktail.strGlass
     ingredients.textContent = ""
 
-    for (let key in cocktail) {
-        if ( key.startsWith("strIngredient") && cocktail[key] !== null && cocktail[key] !== "") {
-                const li = document.createElement("li")
-                li.className = "ingredient"
-                li.textContent = cocktail[key]
+
+    for (let i = 1; i < 15; i++) {
+        // Show both ingredient name and measure
+        if (cocktail[`strIngredient${i}`] !== null && cocktail[`strIngredient${i}`] !== "") {
+            const li = document.createElement("li")
+            li.className = "ingredient"
+            if (cocktail[`strMeasure${i}`] !== null && cocktail[`strMeasure${i}`] !== "") {
+                li.textContent = `${cocktail[`strMeasure${i}`]} ${cocktail[`strIngredient${i}`]}`
                 ingredients.append(li)
-        }
-    }
+                // Show only ingredient name if it has no measure
+            } else {
+                li.textContent = `${cocktail[`strIngredient${i}`]}`
+                ingredients.append(li)
+            }
+        } 
+    }  
+}
+
+// Add like, rating and comment
+
+function addFeedback() {
+    const form = document.querySelector("#rating-comment")
+    const rating = form.querySelector("#rating-given")
+    const comment = form.querySelector("#comment-given")
+    
+    form.addEventListener("submit", (e) => {
+        e.preventDefault()
+        
+        e.target.reset()
+    })
+}
+
+function handleFeedback() {
+
 }
