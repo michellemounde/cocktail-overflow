@@ -12,24 +12,22 @@ const alcoholPresence = "a="
 const category = "c="
 const glass = "g="
 
-
+//consider adding an event listener for search by enter
 document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11007")
-    getAlcohol("Vodka")
-    getAlcohol("Whiskey")
+    getCocktails()
     
     
 
 })
 
-// Get and load alcohol to pick from
+// Get co
 
 function getAlcohol(liquor) {
     fetch(`${BASE_URL}/${filter}${ingredient}${liquor}`)
     .then(resp => resp.json())
     .then(data => {
         const alcohol = data.drinks
-        console.log(alcohol)
         loadAlcohol(liquor)
     })
     .catch(err => {throw err})
@@ -48,6 +46,36 @@ function loadAlcohol(name) {
 }
 
 // Get and load cocktails based on alcohol
+function getCocktails() {
+    const lis = document.querySelectorAll(".alcohol-item")
+    lis.forEach(li => {
+        li.addEventListener("click", () => {
+            fetch(`${BASE_URL}/${filter}${ingredient}${li.textContent}`)
+            .then(resp => resp.json())
+            .then(data => {
+                const cocktails = data.drinks
+                console.log(cocktails)
+                loadCocktails(cocktails)
+            })
+            .catch(err => {throw err})
+        }) 
+    })  
+}
+
+function loadCocktails(cocktails) {
+    cocktails.forEach(cocktail => {
+        const li = document.createElement("li")
+        const ul = document.querySelector("#cocktails")
+
+        li.id = cocktail.idDrink
+        li.className = "cocktails-item"
+        li.textContent = cocktail.strDrink
+
+        console.log(`li: ${li}`)
+
+        ul.append("li")
+    })
+}
 
 
 // Get and load cocktail details to page on click
@@ -56,7 +84,6 @@ function getCocktail(id) {
     .then(resp => resp.json())
     .then(data => {
         const cocktail = data.drinks[0]
-        console.log(cocktail)
         loadCocktail(cocktail)
     })
     .catch(err => {throw err})
