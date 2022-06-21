@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11007")
     getCocktails()
     searchIngredient()
-    
-
+    addFeedback()
+    likeCocktail()
 })
 
 // Get and load cocktails based on alcohol
@@ -112,20 +112,41 @@ function loadCocktail(cocktail) {
     }  
 }
 
-// Add like, rating and comment
-
+// Add rating and comment
 function addFeedback() {
     const form = document.querySelector("#rating-comment")
-    const rating = form.querySelector("#rating-given")
-    const comment = form.querySelector("#comment-given")
+    const ratingInput = form.querySelector("#rating-given")
+    const commentInput = form.querySelector("#comment-given")
     
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        
+        handleFeedback(ratingInput, commentInput)
         e.target.reset()
     })
 }
 
-function handleFeedback() {
+function handleFeedback(rating, comment) {
+    const ratingP = document.querySelector("#rating")
+    const commentP = document.querySelector("#comment")
 
+    ratingP.textContent = rating.value
+    commentP.textContent = comment.value
+}
+
+// Add like functionality
+function likeCocktail() {
+    const btn = document.querySelector("#like-button")
+    
+
+    btn.addEventListener("click", () => {
+        const like = document.querySelector("#like")
+        
+        if ( like.className === "glyphicon glyphicon-heart-empty") {
+        like.classList.remove("glyphicon-heart-empty")
+        like.classList.add("glyphicon-heart")
+        } else {
+            like.classList.add("glyphicon-heart-empty")
+            like.classList.remove("glyphicon-heart")
+        }
+    })
 }
