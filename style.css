@@ -1,0 +1,82 @@
+#main-heading {
+    color: white;
+    background-color: #005566;
+    grid-area: 1 / 1 / 1 / 5;
+    margin: 0%;
+}
+
+#main-heading p {
+    margin: 5px;
+    text-align: center;
+}
+
+body {
+    background-color: #FAEBD7;
+    background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+    display: grid;
+    grid-gap: 20px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(50px, auto);
+}
+
+#alcohol-menu {
+    grid-area: 2 / 1 / 2 / 5;
+}
+
+li.alcohol-item {
+    display: inline-block;
+    text-align: center;
+    padding: 2px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    width: 9.5%;
+}
+
+#cocktail-menu {
+    grid-area: 3 / 1 / 5 / 1;
+    border: 4mm ridge rgba(29, 31, 4, 0.6);
+    padding: 5px;
+    max-height:800px;
+}
+
+#cocktails {
+    min-height: 200px;
+    height: 700px;
+    max-height: 750px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#cocktail-details {
+    grid-area: 3 / 2 / 4 / 2;
+}
+
+#cocktail-name {
+    font-weight: bold;
+}
+
+#cocktail-recipe {
+    grid-area: 3 / 3 / 4 / 3;
+}
+
+#cocktail-ingredients {
+    grid-area: 3 / 4 / 5 / 4;
+    border: 4mm ridge rgba(29, 31, 4, 0.6);
+    padding: 5px;
+    max-height: 800px;
+}
+
+#feedback {
+    grid-area: 4 / 2 / 4 / 4;
+    border: 4mm ridge rgba(29, 31, 4, 0.6);
+    padding-left: 15px;
+    max-height: 465px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
