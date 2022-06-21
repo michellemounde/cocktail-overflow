@@ -12,14 +12,12 @@
         <h1 id="main-heading">
             <p>Cocktail Overflow</p>
         </h1>
+        <!--Section for the alcohol list to pick from to show cocktails-->
         <section id="alcohol-menu">
         <ul id="alcohol">
-            <!--Put liquers here from server with name identification-->
-            <!--Be a side scrollable list through CSS-->
             <li class="alcohol-item">Vodka</li>
             <li class="alcohol-item">Whiskey</li>
-            <!--Note that Baileys is actually found with the term Baileys irish cream-->
-            <li class="alcohol-item">Baileys</li>
+            <li class="alcohol-item">Baileys Irish Cream</li>
             <li class="alcohol-item">Cointreau</li>
             <li class="alcohol-item">Rum</li>
             <li class="alcohol-item">Tequila</li>
@@ -28,69 +26,62 @@
             <li class="alcohol-item">Wine</li>
             <li class="alcohol-item">Beer</li>
         </ul>
+         <!--Form for searching ingredient and showing its cocktails-->
         <form id="search-alcohol">
-            <label for="alcohol-search">Search by alcohol type:</label>
-            <input type="search" id="alcohol-search">
+            <label for="alcohol-search">Ingredient:</label>
+            <input type="search" id="alcohol-search" name="q" placeholder="Search cocktails by ingredient" size="40" required>
             <button>Search</button>
         </form>
         </section>
+        <!--Section where cocktail list loads based on ingredient searched or selected-->
         <section id="cocktail-menu">
-            <!--Put cocktails based on alcohol here with name identification-->
-            <!--Be an unordered list-->
             <h2>Cocktails</h2>
-            <ul id="cocktails">
-            </ul>
+            <ol id="cocktails"></ol>
         </section>
-        <div id="center-grid">
+        <!--Section where cocktail image and name load when cocktail is clicked-->
         <section id="cocktail-details">
-            <!--Put cocktails details here, name and thumbnail etc-->
-            <!--Be mainly the image-->
-            Cocktail image and name here
             <p id="cocktail-name">Cocktail name here</p>
             <br>
             <img src="" alt="cocktail name here"/>
-            
         </section>
+        <!--Section where cocktail recipe and glass load when cocktail is clicked-->
         <section id="cocktail-recipe">
-            <!--Put cocktails recipe here-->
-            <!--Be a paragraph-->
             <h2>Recipe</h2>
-            Put recipe here
-            <!--Put cocktails rating and comment form here-->
+            <p id="recipe"></p>
+            <h3>Glass</h3>
+            <p id="glass"></p>
             <br>
-            <label for="rating-comment">Tried the recipe?</label>
-            <h2>Feedback</h2>
-            <form id="rating-comment">
-                Put a form here for the rating and comment
-                <br>
-                <label for="rating-given">Give a rating:</label>
-                <input type="text" id="rating-given">
-                <br>
-                <label for="comment-given">Leave a comment:</label>
-                <input type="text" id="comment-given">
-                <br>
-                <input type="submit" id="submit-form">
-            </form>
         </section>
-        </div>
+        <!--Section where cocktail ingredients load when cocktail is clicked-->
         <section id="cocktail-ingredients">
             <h2>Ingredients</h2>
-            Style this divided from the rest of the section
-            <!--Put cocktails ingredients here-->
-            <!--Be an ordered list-->
-            Style this as a list on right side of page
-            <ol id="ingredients">
-                <li>Put cocktails here</li>
-            </ol>
-            <!--Put cocktails like button here & rating and comment input here-->
-            <h2>Rating</h2>
+            <ol id="ingredients"></ol>
+        </section>
+        <!--Section for giving and viewing feedback on cocktail-->
+        <section id="feedback">
+            <h2>Community Feedback</h2>
             <p id="like-button">
                 <button type="button" class="btn btn-default btn-sm">
                   <span class="glyphicon glyphicon-heart-empty"></span> Like
                 </button>
               </p>
+            <h3>Ratings</h3>
             <p id="rating">Put rating here</p>
+            <h3>Comments</h3>
             <p id="comment">Put comment here</p>
+            <br>
+            <label for="rating-comment">Tried the recipe?</label>
+            <h3>Feedback</h3>
+            <form id="rating-comment">
+                <br>
+                <label for="rating-given">Give a rating:</label>
+                <input type="text" id="rating-given" placeholder="Type numerical rating here" required>
+                <br>
+                <label for="comment-given">Leave a comment:</label>
+                <input type="text" id="comment-given" placeholder="Type comment here" size="80" required>
+                <br>
+                <input type="submit" id="submit-form">
+            </form>
         </section>
         <script defer type="text/javascript" src="index.js"></script>
     </body>
