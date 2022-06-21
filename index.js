@@ -85,14 +85,20 @@ function loadCocktail(cocktail) {
     const recipe = document.querySelector("#recipe")
     const glass = document.querySelector("#glass")
     const ingredients = document.querySelector("#ingredients")
+    const ratingP = document.querySelector("#rating")
+    const commentP = document.querySelector("#comment")
+    const like = document.querySelector("#like")
     
-
     img.src = `${cocktail.strDrinkThumb}/preview`
     img.alt = cocktail.strDrink
     name.textContent = cocktail.strDrink.toUpperCase()
     recipe.textContent = cocktail.strInstructions
     glass.textContent = cocktail.strGlass
+    //resetting following texts and glyphs to default when a different cocktail is selected
     ingredients.textContent = ""
+    ratingP.textContent = "Your rating will be added here"
+    commentP.textContent = "Your comments will be added here"
+    like.className = "glyphicon glyphicon-heart-empty"
 
 
     for (let i = 1; i < 15; i++) {
@@ -136,7 +142,6 @@ function handleFeedback(rating, comment) {
 // Add like functionality
 function likeCocktail() {
     const btn = document.querySelector("#like-button")
-    
 
     btn.addEventListener("click", () => {
         const like = document.querySelector("#like")
