@@ -1,11 +1,15 @@
+* {
+    color: black
+}
+
 #main-heading {
-    color: white;
-    background-color: #005566;
+    background-color: #00334D;
     grid-area: 1 / 1 / 1 / 5;
     margin: 0%;
 }
 
 #main-heading p {
+    color: white;
     margin: 5px;
     text-align: center;
 }
