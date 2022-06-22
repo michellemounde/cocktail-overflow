@@ -1,17 +1,16 @@
 # Independent Project
 
 A cocktail web application that allows users to explore the types of cocktails that can be made 
-using different liquers and spirits. The user can search by ingredient or cocktail, explore a list 
-of cocktails that can be made using different ingredients, different categories and whether alcoholic 
-or not. The user can look at the recipes for those cocktails. Like a cocktail, leave a comment and 
-suggest ingredients to improve the cocktail.
+using different kinds of alcohol. The user can select or search for an alcohol, explore a list of 
+cocktails that can be made using that alcohol. The user can select the cocktail to see the recipe 
+and ingredient for that cocktail. Like a cocktail, leave a comment and rating for the cocktail.
 
 ## Setup
 
-Run this command to get the backend started:
+Clone the repository to your local machine as below:
 
 ```console
-$ json-server --watch db.json
+$ git clone git@github.com:michellemounde/project-cocktail-web-app.git
 ```
 
 Test your server by visiting this route in the browser:
@@ -23,7 +22,7 @@ Then, open the `index.html` file on your browser to run the application.
 Write your code in the `src/index.js` file. The base URL for your API will be
 [https://www.thecocktaildb.com/api.php](https://www.thecocktaildb.com/api.php).
 
-## The core features of your MVP
+## The core features of my MVP
 
 As a user, I can:
 
@@ -31,32 +30,32 @@ As a user, I can:
 first cocktail available.
 
    ```txt
-   GET api/json/v1/1/lookup.php?i=11007
+   GET api/json/v1/1/lookup.php?i=11000
 
    Example Response:
-   {
-      "idDrink": "11007",
-      "strDrink": "Margarita",
+    {
+      "idDrink": "11000",
+      "strDrink": "Mojito",
       "strDrinkAlternate": null,
-      "strTags": "IBA,ContemporaryClassic",
+      "strTags": "IBA,ContemporaryClassic,Alcoholic,USA,Asia,Vegan,Citrus,Brunch,Hangover,Mild",
       "strVideo": null,
-      "strCategory": "Ordinary Drink",
+      "strCategory": "Cocktail",
       "strIBA": "Contemporary Classics",
       "strAlcoholic": "Alcoholic",
-      "strGlass": "Cocktail glass",
-      "strInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
+      "strGlass": "Highball glass",
+      "strInstructions": "Muddle mint leaves with sugar and lime juice. Add a splash of soda water and fill the glass with cracked ice. Pour the rum and top with soda water. Garnish and serve with straw.",
       "strInstructionsES": null,
-      "strInstructionsDE": "Reiben Sie den Rand des Glases mit der Limettenscheibe, damit das Salz daran haftet. Achten Sie darauf, dass nur der äußere Rand angefeuchtet wird und streuen Sie das Salz darauf. Das Salz sollte sich auf den Lippen des Genießers befinden und niemals in den Cocktail einmischen. Die anderen Zutaten mit Eis schütteln und vorsichtig in das Glas geben.",
+      "strInstructionsDE": "Minzblätter mit Zucker und Limettensaft verrühren. Füge einen Spritzer Sodawasser hinzu und fülle das Glas mit gebrochenem Eis. Den Rum eingießen und mit Sodawasser übergießen. Garnieren und mit einem Strohhalm servieren.",
       "strInstructionsFR": null,
-      "strInstructionsIT": "Strofina il bordo del bicchiere con la fetta di lime per far aderire il sale.\r\nAvere cura di inumidire solo il bordo esterno e cospargere di sale.\r\nIl sale dovrebbe presentarsi alle labbra del bevitore e non mescolarsi mai al cocktail.\r\nShakerare gli altri ingredienti con ghiaccio, quindi versarli delicatamente nel bicchiere.",
+      "strInstructionsIT": "Pestare le foglie di menta con lo zucchero e il succo di lime.\r\nAggiungere una spruzzata di acqua di seltz e riempi il bicchiere con ghiaccio tritato.\r\nVersare il rum e riempire con acqua di seltz.\r\nGuarnire con una fetta di lime, servire con una cannuccia.",
       "strInstructionsZH-HANS": null,
       "strInstructionsZH-HANT": null,
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-      "strIngredient1": "Tequila",
-      "strIngredient2": "Triple sec",
-      "strIngredient3": "Lime juice",
-      "strIngredient4": "Salt",
-      "strIngredient5": null,
+      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/metwgh1606770327.jpg",
+      "strIngredient1": "Light rum",
+      "strIngredient2": "Lime",
+      "strIngredient3": "Sugar",
+      "strIngredient4": "Mint",
+      "strIngredient5": "Soda water",
       "strIngredient6": null,
       "strIngredient7": null,
       "strIngredient8": null,
@@ -67,10 +66,10 @@ first cocktail available.
       "strIngredient13": null,
       "strIngredient14": null,
       "strIngredient15": null,
-      "strMeasure1": "1 1/2 oz ",
-      "strMeasure2": "1/2 oz ",
-      "strMeasure3": "1 oz ",
-      "strMeasure4": null,
+      "strMeasure1": "2-3 oz ",
+      "strMeasure2": "Juice of 1 ",
+      "strMeasure3": "2 tsp ",
+      "strMeasure4": "2-4 ",
       "strMeasure5": null,
       "strMeasure6": null,
       "strMeasure7": null,
@@ -82,15 +81,15 @@ first cocktail available.
       "strMeasure13": null,
       "strMeasure14": null,
       "strMeasure15": null,
-      "strImageSource": "https://commons.wikimedia.org/wiki/File:Klassiche_Margarita.jpg",
-      "strImageAttribution": "Cocktailmarler",
+      "strImageSource": "https://pixabay.com/photos/cocktail-mojito-cocktail-recipe-5096281/",
+      "strImageAttribution": "anilaha https://pixabay.com/users/anilaha-16242978/",
       "strCreativeCommonsConfirmed": "Yes",
-      "dateModified": "2015-08-18 14:42:59"
+      "dateModified": "2016-11-04 09:17:09"
     }
    ```
 
-2. Search a menu of all cocktails available by main ingredient such as liquer or spirit and 
-click on search result to view the cocktails made with that ingredient and select a cocktail to 
+2. Select an alcohol type or search by cocktail ingredient to see a list of all cocktails 
+of that alcohol or ingredient type, select a cocktail in the list by clicking it to 
 replace the first cocktail details with it:
 
    ```txt
@@ -120,154 +119,4 @@ replace the first cocktail details with it:
    ]
    ```
 
-3. Like a cocktail and after liking it see the like count update
-
-### Bonus Features
-
-**Make sure to commit your work to save your progress before
-adding the bonus features!**
-
-1. Click on a cocktail in the menu to replace the currently displayed cocktail's
-   details with the new cocktail's details.
-
-2. When a cocktail is commented on or suggested ingredients, update the 
-comment and suggested ingredients for the cocktail:
-
-   ```html
-   ```
-
-#### Extra Bonus Features
-
-These extra bonus features involve using `fetch` to update data on the
-`json-server` backend by using `POST`, `PATCH`, and `DELETE` requests. **Make sure to
-commit your work to save your progress before adding the extra bonus
-features!**
-
-1. When a cocktail is suggested ingredients, commented or liked, its details should be 
-updated on the backend when a ticket is purchased. Make a request that follows this structure:
-
-   ```txt
-   PATCH cocktails/11007
-
-   Request Headers: {
-     Content-Type: application/json
-   }
-
-   Request Body: {
-     "strIngredient5": null,
-     "comment": "This is the best coktail ever"
-     "likeCount": 1
-   }
-   ----
-   Example Response:
-    {
-      "idDrink": "11007",
-      "strDrink": "Margarita",
-      "strDrinkAlternate": null,
-      "strTags": "IBA,ContemporaryClassic",
-      "strVideo": null,
-      "strCategory": "Ordinary Drink",
-      "strIBA": "Contemporary Classics",
-      "strAlcoholic": "Alcoholic",
-      "strGlass": "Cocktail glass",
-      "strInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
-      "strInstructionsES": null,
-      "strInstructionsDE": "Reiben Sie den Rand des Glases mit der Limettenscheibe, damit das Salz daran haftet. Achten Sie darauf, dass nur der äußere Rand angefeuchtet wird und streuen Sie das Salz darauf. Das Salz sollte sich auf den Lippen des Genießers befinden und niemals in den Cocktail einmischen. Die anderen Zutaten mit Eis schütteln und vorsichtig in das Glas geben.",
-      "strInstructionsFR": null,
-      "strInstructionsIT": "Strofina il bordo del bicchiere con la fetta di lime per far aderire il sale.\r\nAvere cura di inumidire solo il bordo esterno e cospargere di sale.\r\nIl sale dovrebbe presentarsi alle labbra del bevitore e non mescolarsi mai al cocktail.\r\nShakerare gli altri ingredienti con ghiaccio, quindi versarli delicatamente nel bicchiere.",
-      "strInstructionsZH-HANS": null,
-      "strInstructionsZH-HANT": null,
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-      "strIngredient1": "Tequila",
-      "strIngredient2": "Triple sec",
-      "strIngredient3": "Lime juice",
-      "strIngredient4": "Salt",
-      "strIngredient5": null,
-      "strIngredient6": null,
-      "strIngredient7": null,
-      "strIngredient8": null,
-      "strIngredient9": null,
-      "strIngredient10": null,
-      "strIngredient11": null,
-      "strIngredient12": null,
-      "strIngredient13": null,
-      "strIngredient14": null,
-      "strIngredient15": null,
-      "strMeasure1": "1 1/2 oz ",
-      "strMeasure2": "1/2 oz ",
-      "strMeasure3": "1 oz ",
-      "strMeasure4": null,
-      "strMeasure5": null,
-      "strMeasure6": null,
-      "strMeasure7": null,
-      "strMeasure8": null,
-      "strMeasure9": null,
-      "strMeasure10": null,
-      "strMeasure11": null,
-      "strMeasure12": null,
-      "strMeasure13": null,
-      "strMeasure14": null,
-      "strMeasure15": null,
-      "strImageSource": "https://commons.wikimedia.org/wiki/File:Klassiche_Margarita.jpg",
-      "strImageAttribution": "Cocktailmarler",
-      "strCreativeCommonsConfirmed": "Yes",
-      "dateModified": "2015-08-18 14:42:59"
-      "comment": "This is the best coktail ever"
-      "likeCount": 1 
-    }
-   ```
-
-2. Delete a cocktail from the server. Add a delete button next to each cocktail in the
-   cocktail menu. When the button is clicked, remove the cocktail from the list
-   and also delete the cocktail on the server:
-
-   ```txt
-   DELETE cocktails/11007
-
-   Example Response:
-   {}
-   ```
-
-3. Add a cocktail to the server and frontend by submitting the new-cocktail form. Update
-to the server using a POST request and add to HTML by adding to the list as an li item
-
-```txt
-   POST cocktails/
-
-   Request Headers: {
-     Content-Type: application/json
-   }
-
-   Request Body: {
-      "idDrink": "11007",
-      "strDrink": "Margarita",
-      "strAlcoholic": "Alcoholic",
-      "strGlass": "Cocktail glass",
-      "strInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-      "strIngredient1": "Tequila",
-      "strIngredient2": "Triple sec",
-      "strIngredient3": "Lime juice",
-      "strIngredient4": "Salt",
-      "strMeasure1": "1 1/2 oz ",
-      "strMeasure2": "1/2 oz ",
-      "strMeasure3": "1 oz ",
-   }
-   ----
-   Example Response:
-    {
-      "idDrink": "11007",
-      "strDrink": "Margarita",
-      "strAlcoholic": "Alcoholic",
-      "strGlass": "Cocktail glass",
-      "strInstructions": "Rub the rim of the glass with the lime slice to make the salt stick to it. Take care to moisten only the outer rim and sprinkle the salt on it. The salt should present to the lips of the imbiber and never mix into the cocktail. Shake the other ingredients with ice, then carefully pour into the glass.",
-      "strDrinkThumb": "https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg",
-      "strIngredient1": "Tequila",
-      "strIngredient2": "Triple sec",
-      "strIngredient3": "Lime juice",
-      "strIngredient4": "Salt",
-      "strMeasure1": "1 1/2 oz ",
-      "strMeasure2": "1/2 oz ",
-      "strMeasure3": "1 oz ",
-    }
-   ```
+3. Like and unlike, rate and comment on a cocktail and see the like, rating and comment update.
