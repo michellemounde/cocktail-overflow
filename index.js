@@ -4,7 +4,7 @@ const filter = "filter.php?"
 const ingr = "i="
 
 document.addEventListener("DOMContentLoaded", () => {
-    getCocktail("11007")
+    getCocktail("11000")
     getCocktails()
     searchIngredient()
     addFeedback()
@@ -94,7 +94,7 @@ function loadCocktail(cocktail) {
     name.textContent = cocktail.strDrink.toUpperCase()
     recipe.textContent = cocktail.strInstructions
     glass.textContent = cocktail.strGlass
-    //resetting following texts and glyphs to default when a different cocktail is selected
+    // Resetting the following texts and glyphs to default when a different cocktail is selected
     ingredients.textContent = ""
     ratingP.textContent = "Your rating will be added here"
     commentP.textContent = "Your comments will be added here"
@@ -118,7 +118,7 @@ function loadCocktail(cocktail) {
     }  
 }
 
-// Add rating and comment
+// Add rating and comment functionality
 function addFeedback() {
     const form = document.querySelector("#rating-comment")
     const ratingInput = form.querySelector("#rating-given")
