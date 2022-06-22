@@ -94,7 +94,7 @@ function loadCocktail(cocktail) {
     name.textContent = cocktail.strDrink.toUpperCase()
     recipe.textContent = cocktail.strInstructions
     glass.textContent = cocktail.strGlass
-    // Resetting the following texts and glyphs to default when a different cocktail is selected
+    // Resetting the following texts and glyph to default when a different cocktail is selected
     ingredients.textContent = ""
     ratingP.textContent = "Your rating will be added here"
     commentP.textContent = "Your comments will be added here"
@@ -118,7 +118,7 @@ function loadCocktail(cocktail) {
     }  
 }
 
-// Add rating and comment functionality
+// Enable adding of rating and comment
 function addFeedback() {
     const form = document.querySelector("#rating-comment")
     const ratingInput = form.querySelector("#rating-given")
@@ -139,7 +139,7 @@ function handleFeedback(rating, comment) {
     commentP.textContent = comment.value
 }
 
-// Add like functionality
+// Enable liking and unliking of cocktail
 function likeCocktail() {
     const btn = document.querySelector("#like-button")
 
@@ -147,8 +147,8 @@ function likeCocktail() {
         const like = document.querySelector("#like")
         
         if ( like.className === "glyphicon glyphicon-heart-empty") {
-        like.classList.remove("glyphicon-heart-empty")
-        like.classList.add("glyphicon-heart")
+            like.classList.remove("glyphicon-heart-empty")
+            like.classList.add("glyphicon-heart")
         } else {
             like.classList.add("glyphicon-heart-empty")
             like.classList.remove("glyphicon-heart")
