@@ -1,9 +1,10 @@
 # Independent Project Phase 1
 
 Cocktail Overflow is a cocktail web application that allows users to explore the types of cocktails that can be made 
-using different kinds of alcohol. The user can select or search for an alcohol, explore a list of 
-cocktails that can be made using that alcohol. The user can select the cocktail to see the recipe 
-and ingredient for that cocktail. Like a cocktail, leave a comment and rating for the cocktail.
+using different kinds of alcohol. The user can select or search for an alcohol type or ingedient, explore a list of 
+cocktails that can be made using that alcohol or ingredient. The user can select a cocktail from the list to see the recipe, glass
+and ingredients for that cocktail. The user can like a cocktail, leave a comment and rating for the cocktail. The like, 
+comment and rating have no persistence on cocktail change.
 
 ## Setup
 
