@@ -56,7 +56,7 @@ li.alcohol-item {
     overflow-y: scroll;
 }
 
-#cocktail-title {
+section #cocktail-title {
     grid-area: 3 / 2 / 3 / 4;
 }
 
