@@ -54,6 +54,16 @@
             <br>
             <br>
             <p id="feedback-request">Tried the recipe? Give it a like and leave feedback!</p>
+            <br>
+            <form id="rating-comment">
+                <label for="rating-given">Rating:</label>
+                <input type="number" id="rating-given" placeholder="Number between 0 and 10" size="30" min="0" max="10"required>
+                <br>
+                <label for="comment-given">Comment:</label>
+                <input type="text" id="comment-given" placeholder="Type comment here" size="35" maxlength="100" required>
+                <br>
+                <input type="submit" id="submit-form">
+            </form>
         </section>
         <!--Section where cocktail recipe and glass load when cocktail is clicked-->
         <section id="cocktail-recipe">
@@ -70,20 +80,9 @@
         <!--Section for giving and viewing feedback on cocktail-->
         <section id="feedback">
             <h2>Community Feedback</h2>
-            <br>
-            <form id="rating-comment">
-                <label for="rating-given">Give a rating:</label>
-                <input type="number" id="rating-given" placeholder="Ratings are a number between 1 and 10" size="30" minlength="1" maxlength="2" required>
-                <br>
-                <label for="comment-given">Leave a comment:</label>
-                <input type="text" id="comment-given" placeholder="Type comment here" size="70" maxlength="90" required>
-                <br>
-                <input type="submit" id="submit-form">
-            </form>
-            <br>
-            <h4><strong>Ratings</strong></h4>
+            <h3><strong>Ratings</strong></h3>
             <p id="rating">Your rating will be added here</p>
-            <h4><strong>Comments</strong></h4>
+            <h3><strong>Comments</strong></h3>
             <p id="comment">Your comments will be added here</p>
             <br>
         </section>
