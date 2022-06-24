@@ -39,9 +39,10 @@
             <ol id="cocktails"></ol>
         </section>
         <!--Section where cocktail image and name load when cocktail is clicked-->
-        <section id="cocktail-details">
+        <section id="cocktail-title">
             <p id="cocktail-name">Cocktail name here</p>
-            <br>
+        </section>
+        <section id="cocktail-details">
             <img src="" alt="cocktail name here"/>
             <br>
             <br>
@@ -50,6 +51,9 @@
                   <span id="like" class="glyphicon glyphicon-heart-empty"></span> Like
                 </button>
             </p>
+            <br>
+            <br>
+            <p id="feedback-request">Tried the recipe? Give it a like and leave feedback!</p>
         </section>
         <!--Section where cocktail recipe and glass load when cocktail is clicked-->
         <section id="cocktail-recipe">
@@ -66,20 +70,18 @@
         <!--Section for giving and viewing feedback on cocktail-->
         <section id="feedback">
             <h2>Community Feedback</h2>
-            <label for="rating-comment">Tried the recipe?</label>
-            <h3>Feedback</h3>
             <form id="rating-comment">
                 <label for="rating-given">Give a rating:</label>
-                <input type="text" id="rating-given" placeholder="Type rating here" required>
+                <input type="text" id="rating-given" placeholder="Ratings are a number between 1 and 10" size="30" minlength="1" maxlength="2" required>
                 <br>
                 <label for="comment-given">Leave a comment:</label>
-                <input type="text" id="comment-given" placeholder="Type comment here" size="70" required>
+                <input type="text" id="comment-given" placeholder="Type comment here" size="70" maxlength="90" required>
                 <br>
                 <input type="submit" id="submit-form">
             </form>
             <br>
             <h4><strong>Ratings</strong></h4>
-            <p id="rating">Your rating will be added here</p>
+            <p id="rating">Your rating will be added here<span>/10</span></p>
             <h4><strong>Comments</strong></h4>
             <p id="comment">Your comments will be added here</p>
             <br>

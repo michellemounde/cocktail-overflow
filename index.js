@@ -78,14 +78,14 @@ function getCocktail(id) {
 function loadCocktail(cocktail) {
     const details = document.querySelector("#cocktail-details")
     const img = details.querySelector("img")
-    const name = details.querySelector("#cocktail-name")
+    const name = document.querySelector("#cocktail-name")
     const recipe = document.querySelector("#recipe")
     const glass = document.querySelector("#glass")
     const ingredients = document.querySelector("#ingredients")
     const ratingP = document.querySelector("#rating")
     const commentP = document.querySelector("#comment")
     const like = document.querySelector("#like")
-    
+
     img.src = `${cocktail.strDrinkThumb}/preview`
     img.alt = cocktail.strDrink
     name.textContent = cocktail.strDrink.toUpperCase()
