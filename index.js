@@ -1,7 +1,4 @@
 const BASE_URL = "https://www.thecocktaildb.com/api/json/v1/1/"
-const lookup = "lookup.php?"
-const filter = "filter.php?"
-const ingr = "i="
 
 document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11000")
@@ -17,7 +14,7 @@ function getCocktails() {
     lis.forEach(li => {
         li.addEventListener("click", (e) => {
 
-            fetch(`${BASE_URL}/${filter}${ingr}${li.textContent}`)
+            fetch(`${BASE_URL}/filter.php?i=${li.textContent}`)
             .then(resp => resp.json())
             .then(data => {
                 const cocktails = data.drinks
@@ -48,14 +45,14 @@ function loadCocktails(cocktails) {
     })
 }
 
-// Get and load cocktails based on search 
+// Get and load cocktails based on ingredient searched for 
 function searchIngredient() {
     const form = document.querySelector("#search-alcohol")
     const searchIngr = form.querySelector("#alcohol-search")
     
     form.addEventListener("submit", (e) => {
         e.preventDefault()
-        fetch(`${BASE_URL}/${filter}${ingr}${searchIngr.value}`)
+        fetch(`${BASE_URL}/filter.php?i=${searchIngr.value}`)
         .then(resp => resp.json())
         .then(data => {
             const cocktails = data.drinks
@@ -69,7 +66,7 @@ function searchIngredient() {
 
 // Get and load cocktail details to page on click
 function getCocktail(id) {
-    fetch(`${BASE_URL}/${lookup}${ingr}${id}`)
+    fetch(`${BASE_URL}/lookup.php?i=${id}`)
     .then(resp => resp.json())
     .then(data => {
         const cocktail = data.drinks[0]
@@ -103,10 +100,10 @@ function loadCocktail(cocktail) {
 
     for (let i = 1; i < 15; i++) {
         // Show both ingredient name and measure
-        if (cocktail[`strIngredient${i}`] !== null && cocktail[`strIngredient${i}`] !== "") {
+        if (!!cocktail[`strIngredient${i}`]) {
             const li = document.createElement("li")
             li.className = "ingredient"
-            if (cocktail[`strMeasure${i}`] !== null && cocktail[`strMeasure${i}`] !== "") {
+            if (!!cocktail[`strMeasure${i}`]) {
                 li.textContent = `${cocktail[`strMeasure${i}`]} ${cocktail[`strIngredient${i}`]}`
                 ingredients.append(li)
                 // Show only ingredient name if it has no measure
