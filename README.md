@@ -6,6 +6,13 @@ cocktails that can be made using that alcohol or ingredient. The user can select
 and ingredients for that cocktail. The user can like a cocktail, leave a comment and rating for the cocktail. The like, 
 comment and rating have no persistence on cocktail change.
 
+## Demo
+Use this gif as an example of how the app should work.
+
+![Cocktail Overflow Demo](https://github.com/michellemounde/project-cocktail-web-app/main/assets/FRN3gh.gif?raw=true "Cocktail Overflow Demo")
+
+To view in VSCode, right click on the README.md file and select "Open Preview".
+
 ## Setup
 
    * To run the application:
