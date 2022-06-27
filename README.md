@@ -9,7 +9,7 @@ comment and rating have no persistence on cocktail change.
 ## Demo
 Use this gif as an example of how the app should work.
 
-![Cocktail Overflow Demo](https://github.com/michellemounde/project-cocktail-web-app/blob/main/assets/FRN3gH.gifraw=true "Cocktail Overflow Demo")
+![Cocktail Overflow Demo](https://github.com/michellemounde/project-cocktail-web-app/blob/main/assets/FRN3gH.gif?raw=true "Cocktail Overflow Demo")
 
 To view in VSCode, right click on the README.md file and select "Open Preview".
 
