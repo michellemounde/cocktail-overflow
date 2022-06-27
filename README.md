@@ -13,15 +13,20 @@ Use this gif as an example of how the app should work.
 
 To view in VSCode, right click on the README.md file and select "Open Preview".
 
-## Setup
+## Live Site
 
-   * To run the application:
+  * To use the live site follow this link:
+    [https://michellemounde.github.io/project-cocktail-web-app/](https://michellemounde.github.io/project-cocktail-web-app/)
+
+  * Alternatively:
 
     1. Go to Environments on this repository page
     2. Open Github Pages
     3. View the latest deployment
+
+## Setup
     
-  * Alternatively, in your terminal:
+  * To run the application, in your terminal:
 
     1. Clone the repository to your local machine as below:
 
