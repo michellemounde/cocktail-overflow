@@ -16,7 +16,7 @@ To view in VSCode, right click on the README.md file and select "Open Preview".
 ## Live Site
 
   * To use the live site follow this link:
-    [https://michellemounde.github.io/project-cocktail-web-app/](https://michellemounde.github.io/Cocktail-Overflow-Web-App/)
+    [https://michellemounde.github.io/Cocktail-Overflow-Web-App/](https://michellemounde.github.io/Cocktail-Overflow-Web-App/)
 
   * Alternatively:
 
@@ -75,9 +75,9 @@ To fix a bug or enhance an existing module, follow these steps:
 
 ### Known Bugs
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new](https://github.com/michellemounde/project-cocktail-web-app/issues/new) by including your search query and the expected result.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new](https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new) by including your search query and the expected result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [https://github.com/michellemounde/project-cocktail-web-app/issues/new](https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new). Please include sample queries and their corresponding results.
+If you'd like to request a new function, feel free to do so by opening an issue [https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new](https://github.com/michellemounde/Cocktail-Overflow-Web-App/issues/new). Please include sample queries and their corresponding results.
 
 ### License
 
