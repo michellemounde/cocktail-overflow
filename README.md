@@ -54,7 +54,7 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ```
 
   * To use the live site follow this link:
-    [https://michellemounde.github.io/Cocktail-Overflow-Web-App/](https://michellemounde.github.io/Cocktail-Overflow-Web-App/)
+    [https://michellemounde.github.io/mocktail-overflow/](https://michellemounde.github.io/mocktail-overflow/)
 
   * Alternatively:
 
