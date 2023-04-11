@@ -53,8 +53,8 @@ To add a screenshot, create an `assets/images` folder in your repository and upl
     ![alt text](assets/images/screenshot.png)
     ```
 
-* To use the live site follow this link:
-    [https://michellemounde.github.io/mocktail-verflow/](https://michellemounde.github.io/mocktail-overflow/)
+  * To use the live site follow this link:
+    [https://michellemounde.github.io/Cocktail-Overflow-Web-App/](https://michellemounde.github.io/Cocktail-Overflow-Web-App/)
 
   * Alternatively:
 
@@ -147,3 +147,5 @@ Go the extra mile and write tests for your application. Then provide examples on
 ## License
 
 The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [choosealicense.com](https://choosealicense.com/).
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
