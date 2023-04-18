@@ -41,14 +41,14 @@ li.ingredient-item {
     width: 9.5%;
 }
 
-#mocktail-menu {
+#cocktail-menu {
     grid-area: 3 / 1 / 6 / 1;
     border: 4mm ridge rgba(29, 31, 4, 0.6);
     padding: 5px;
     max-height:780px;
 }
 
-#mocktails {
+#cocktails {
     min-height: 200px;
     height: 600px;
     max-height: 650px;
@@ -56,25 +56,25 @@ li.ingredient-item {
     overflow-y: scroll;
 }
 
-body section#mocktail-title {
+body section#cocktail-title {
     grid-area: 3 / 2 / 3 / 4;
 }
 
-#mocktail-details {
+#cocktail-details {
     grid-area: 4 / 2 / 4 / 2;
 }
 
-#mocktail-name {
+#cocktail-name {
     font-weight: bold;
     font-size: 35px;
     font-style: italic;
 }
 
-#mocktail-recipe {
+#cocktail-recipe {
     grid-area: 4 / 3 / 4 / 3;
 }
 
-#mocktail-ingredients {
+#cocktail-ingredients {
     grid-area: 3 / 4 / 6 / 4;
     border: 4mm ridge rgba(29, 31, 4, 0.6);
     padding: 5px;
