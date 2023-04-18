@@ -4,17 +4,17 @@ document.addEventListener("DOMContentLoaded", () => {
     getCocktail("11000")
     getCocktails()
     searchIngredient()
-    addFeedback()
     likeCocktail()
+    addFeedback()
 })
 
 // Get and load cocktails based on ingredient
 function getCocktails() {
-    const lis = document.querySelectorAll(".ingredient-item")
+    const lis = document.querySelectorAll(".main-ingredient-item")
     lis.forEach(li => {
         li.addEventListener("click", (e) => {
 
-            fetch(`${BASE_URL}/filter.php?i=${li.textContent}`)
+            fetch(`${BASE_URL}/filter.php?i=${e.target.textContent}`)
             .then(resp => resp.json())
             .then(data => {
                 const cocktails = data.drinks
@@ -91,6 +91,7 @@ function loadCocktail(cocktail) {
     name.textContent = cocktail.strDrink.toUpperCase()
     recipe.textContent = cocktail.strInstructions
     glass.textContent = cocktail.strGlass
+
     // Resetting the following texts and glyph to default when a different cocktail is selected
     ingredients.textContent = ""
     ratingP.textContent = "Your rating will be added here"
