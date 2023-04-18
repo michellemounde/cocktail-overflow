@@ -47,11 +47,10 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 ## Acknowledgements
 
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
 Credits:
 
 	API:
-		[TheCocktailDB](https://www.thecocktaildb.com/api.php)
+  - [TheCocktailDB](https://www.thecocktaildb.com/api.php)
 
 ## Technologies
 - JavaScript
