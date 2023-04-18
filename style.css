@@ -33,6 +33,7 @@ body {
 }
 
 li.main-ingredient-item {
+    cursor: pointer;
     display: inline-block;
     text-align: center;
     padding: 2px;
@@ -54,6 +55,10 @@ li.main-ingredient-item {
     max-height: 650px;
     overflow: hidden;
     overflow-y: scroll;
+}
+
+.cocktails-item {
+    cursor: pointer;
 }
 
 body section#cocktail-title {
