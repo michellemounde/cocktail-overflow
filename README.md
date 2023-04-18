@@ -49,8 +49,7 @@ If your README is long, add a table of contents to make it easy for users to fin
 
 Credits:
 
-	API:
-  - [TheCocktailDB](https://www.thecocktaildb.com/api.php)
+  API: [TheCocktailDB](https://www.thecocktaildb.com/api.php)
 
 ## Technologies
 - JavaScript
