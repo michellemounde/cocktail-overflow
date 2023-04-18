@@ -28,11 +28,11 @@ body {
     grid-template-rows: minmax(50px, auto);
 }
 
-#ingredient-menu {
+#main-ingredient-menu {
     grid-area: 2 / 1 / 2 / 5;
 }
 
-li.ingredient-item {
+li.main-ingredient-item {
     display: inline-block;
     text-align: center;
     padding: 2px;

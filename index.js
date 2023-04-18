@@ -81,7 +81,7 @@ function loadCocktail(cocktail) {
     const name = document.getElementById("cocktail-name")
     const recipe = document.querySelector("#recipe")
     const glass = document.querySelector("#glass")
-    const ingredients = document.querySelector("#ingredients")
+    const ingredients = document.querySelector("#sub-ingredients")
     const ratingP = document.querySelector("#rating")
     const commentP = document.querySelector("#comment")
     const like = document.querySelector("#like")
@@ -102,7 +102,7 @@ function loadCocktail(cocktail) {
         // Show both ingredient name and measure
         if (!!cocktail[`strIngredient${i}`]) {
             const li = document.createElement("li")
-            li.className = "ingredient"
+            li.className = "sub-ingredient"
             if (!!cocktail[`strMeasure${i}`]) {
                 li.textContent = `${cocktail[`strMeasure${i}`]} ${cocktail[`strIngredient${i}`]}`
                 ingredients.append(li)
