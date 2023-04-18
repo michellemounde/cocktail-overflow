@@ -8,9 +8,9 @@ document.addEventListener("DOMContentLoaded", () => {
     likeCocktail()
 })
 
-// Get and load cocktails based on alcohol
+// Get and load cocktails based on ingredient
 function getCocktails() {
-    const lis = document.querySelectorAll(".alcohol-item")
+    const lis = document.querySelectorAll(".ingredient-item")
     lis.forEach(li => {
         li.addEventListener("click", (e) => {
 
@@ -21,8 +21,8 @@ function getCocktails() {
                 loadCocktails(cocktails)
             })
             .catch(err => {throw err})
-        }) 
-    })  
+        })
+    })
 }
 
 function loadCocktails(cocktails) {
@@ -32,24 +32,24 @@ function loadCocktails(cocktails) {
     cocktails.forEach(cocktail => {
         const li = document.createElement("li")
         const ol = document.querySelector("#cocktails")
-           
+
         li.id = cocktail.idDrink
         li.className = "cocktails-item"
         li.textContent = cocktail.strDrink
-        
+
         ol.append(li)
 
         li.addEventListener("click", () => {
             getCocktail(li.id)
-        })          
+        })
     })
 }
 
-// Get and load cocktails based on ingredient searched for 
+// Get and load cocktails based on ingredient searched for
 function searchIngredient() {
-    const form = document.querySelector("#search-alcohol")
-    const searchIngr = form.querySelector("#alcohol-search")
-    
+    const form = document.querySelector("#search-ingredient")
+    const searchIngr = form.querySelector("#ingredient-search")
+
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         fetch(`${BASE_URL}/filter.php?i=${searchIngr.value}`)
@@ -111,8 +111,8 @@ function loadCocktail(cocktail) {
                 li.textContent = `${cocktail[`strIngredient${i}`]}`
                 ingredients.append(li)
             }
-        } 
-    }  
+        }
+    }
 }
 
 // Enable adding of rating and comment
@@ -120,7 +120,7 @@ function addFeedback() {
     const form = document.querySelector("#rating-comment")
     const ratingInput = form.querySelector("#rating-given")
     const commentInput = form.querySelector("#comment-given")
-    
+
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         handleFeedback(ratingInput, commentInput)
@@ -142,7 +142,7 @@ function likeCocktail() {
 
     btn.addEventListener("click", () => {
         const like = document.querySelector("#like")
-        
+
         if ( like.className === "glyphicon glyphicon-heart-empty") {
             like.classList.remove("glyphicon-heart-empty")
             like.classList.add("glyphicon-heart")
